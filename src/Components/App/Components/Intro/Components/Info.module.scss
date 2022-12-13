@@ -1,0 +1,7 @@
+.info {
+  @apply flex flex-col gap-2 items-center text-secondary;
+
+  &__secondary {
+    @apply text-light-gray;
+  }
+}

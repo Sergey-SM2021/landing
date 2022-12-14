@@ -1,0 +1,25 @@
+.dishCard {
+  @apply bg-dark-gray text-secondary flex flex-col gap-5 box-border rounded;
+  &__actions{
+    @apply flex justify-between items-center text-black;
+  }
+  &__media{
+    @apply w-full;
+  }
+  &__rating{
+    @apply flex gap-1;
+  }
+  &__title{
+    @apply text-3xl;
+  }
+  &__subtitle{
+    color: #A4A8B2;
+  }
+  &__description{
+    @apply text-light-gray;
+  }
+  &__content{
+    @apply flex flex-col gap-5;
+    padding: 0 25px 25px 25px;
+  }
+}

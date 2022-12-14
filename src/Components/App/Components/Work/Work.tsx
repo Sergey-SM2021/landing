@@ -1,3 +1,34 @@
+import {Container} from "Components/Shared/Container/Container";
+import {SectionTitle} from "Components/Shared/SectionTitle/SectionTitle";
+import {MDescription} from "./Description";
+
+const descriptions = [
+    {
+        title: "Pick meals",
+        description: "Choose your meals from our diverse weekly menu. Find gluten or dairy free, low carb & veggie options."
+    },
+    {
+        title: "Choose how often",
+        description: "Our team of chefs do the prep work - no more chopping, measuring, or sink full of dishes!"
+    },
+    {
+        title: "fast deliveries",
+        description: "Your freshly prepped 15-min dinner kits arrive on your doorstep in a refrigerated box."
+    },
+    {
+        title: "tasty meals",
+        description: "Gobble makes cooking fast, so you have more time to unwind and be with family."
+    }
+]
+
 export const Work = () => {
-    return <div></div>
+    return <Container className={'w-full'}>
+        <SectionTitle secondary={'work'} primary={'how it works'}/>
+        <div className={'flex justify-between gap-5'}>
+            {descriptions.map((desc, i) => <MDescription
+                whileInView={{y: 0, transition: {delay: (i + 1) * .2}, opacity: 1}}
+                viewport={{once:true}}
+                initial={{opacity: 0, y: "-100px"}} {...desc}/>)}
+        </div>
+    </Container>
 }

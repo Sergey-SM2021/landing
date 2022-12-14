@@ -11,7 +11,7 @@ interface IProps {
 }
 
 export const Slider = ({slides}: IProps) => {
-    return (<div className={'flex items-center'}>
+    return (<div className={'flex gap-10 items-center justify-between'}>
         <div style={{borderColor: "#303030"}}
              className="prev rounded-full border-black border w-16 h-16 flex justify-center items-center">
             <img src={left} alt="left-button"/>

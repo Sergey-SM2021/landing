@@ -1,0 +1,5 @@
+.dishes {
+  @apply grid;
+  gap: 30px;
+  grid-template: 1fr 1fr/1fr 1fr 1fr;
+}

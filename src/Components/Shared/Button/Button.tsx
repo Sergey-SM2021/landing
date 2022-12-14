@@ -5,7 +5,7 @@ export const Button = forwardRef<HTMLButtonElement, PropsWithChildren & Componen
                                                                                                        children,
                                                                                                        ...rest
                                                                                                    }, ref) => {
-    return (<motion.button className={'bg-primary rounded-3xl py-4 px-10'} ref={ref}>
+    return (<motion.button className={'bg-primary font-bold rounded-3xl py-4 px-10'} ref={ref}>
         {children}
     </motion.button>)
 })

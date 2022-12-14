@@ -1,5 +1,5 @@
 import s from './Intro.module.scss'
-import {Button, MButton} from "Components/Shared/Button/Button";
+import {MButton} from "Components/Shared/Button/Button";
 import {ReactComponent as Clock} from "assets/clock.svg";
 import {ReactComponent as Call} from "assets/call.svg";
 import {ReactComponent as Near_me} from "assets/near_me.svg";
@@ -56,7 +56,7 @@ export const Intro = () => {
             </p>
         </div>
         <div className={'flex justify-center pt-16'}>
-            <MButton initial={{scale:0}} animate={{scale:1,transition:{delay:.5}}}>Order Now</MButton>
+            <MButton initial={{scale:0}} animate={{scale:1,transition:{delay:.5}}} whileHover={{y:-10}}>Order Now</MButton>
         </div>
         <div className={'flex gap-28 justify-center pt-16'}>
             {info.map((item, index) => <MInfo initial={'initial'} animate={'visible'} custom={index}

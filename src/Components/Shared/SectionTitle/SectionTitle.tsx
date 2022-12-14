@@ -1,19 +1,33 @@
 import {forwardRef} from "react";
 import {motion} from "framer-motion";
+import s from "./SectionTitle.module.scss";
+import cn from "classnames";
 
 interface IProps {
     primary: string
     secondary: string
+    underlined?: boolean
 }
 
-export const SectionTitle = forwardRef<HTMLDivElement, IProps>(({primary, secondary}, ref) => {
-    return (<motion.div className={'w-full pt-24 pb-14'} initial={{opacity:0,scale:0}} viewport={{once:true}} whileInView={{opacity:1,scale:1}} ref={ref}>
-        <div className={'w-full flex justify-center relative'}>
-            <div className={'font-black text-7xl tracking-widest uppercase'} style={{color: "#303030"}}>{secondary}</div>
-            <div style={{top: "50%", transform: "translateY(-50%)"}}
-                 className={'text-secondary tracking-widest w-full flex justify-center absolute'}>{primary}</div>
-        </div>
-    </motion.div>)
+const SectionTitleVariants = {
+    initial: {
+        opacity: 0,
+        scale: 0
+    },
+    inView: {
+        opacity: 1,
+        scale: 1
+    }
+}
+
+export const SectionTitle = forwardRef<HTMLDivElement, IProps>(({primary, secondary, underlined = true}, ref) => {
+    return (
+        <motion.div className={cn([s.sectionTitle, underlined ? s.underlined : ""])} variants={SectionTitleVariants}
+                    initial={'initial'}
+                    viewport={{once: true}} whileInView={'inView'} ref={ref}>
+            <div className={s.sectionTitle__secondary}>{secondary}</div>
+            <div className={s.sectionTitle__primary}>{primary}</div>
+        </motion.div>)
 })
 
 export const MSectionTitle = motion(SectionTitle)

@@ -1,0 +1,8 @@
+.about {
+  @apply bg-black;
+  &__container {
+    @media(min-width: 700px) {
+      margin-top: -50px;
+    }
+  }
+}

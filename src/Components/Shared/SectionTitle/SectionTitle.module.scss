@@ -1,0 +1,24 @@
+.sectionTitle {
+  @apply w-full flex justify-center relative w-full py-24;
+
+  &__primary {
+    @apply text-secondary tracking-widest w-full flex justify-center absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__secondary {
+    @apply font-black text-7xl tracking-widest uppercase text-secondary;
+    color: #303030;
+  }
+}
+
+.underlined {
+  &:before {
+    @apply absolute w-14 bg-primary;
+    content: "";
+    height: 2px;
+    position: absolute;
+    bottom: 25%;
+  }
+}

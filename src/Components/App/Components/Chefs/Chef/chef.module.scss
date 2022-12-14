@@ -1,0 +1,26 @@
+.chef{
+  width: 350px;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  &__ava{
+
+  }
+  &__wideMedia{
+    grid-column: span 2;
+  }
+  &__fullName{
+    @apply text-secondary text-xl;
+  }
+  &__media{
+    @apply bg-primary;
+  }
+  &__about{
+    @apply flex flex-col gap-1;
+    align-self: center;
+    grid-column: span 3;
+  }
+  &__description{
+    @apply text-light-gray;
+  }
+}

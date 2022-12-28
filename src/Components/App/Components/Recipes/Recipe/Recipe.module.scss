@@ -2,38 +2,64 @@
   color: #fff;
   position: relative;
   overflow: hidden;
-  &:first-child{
+
+  &:first-child {
     grid-row: span 3;
-    .recipe{
-      &__content{
+
+    .recipe {
+      &__content {
         padding: 60px 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
       }
-      &__infoPrimary{
+
+      &__infoPrimary {
         display: flex;
         gap: 50px;
         flex-direction: column;
       }
-      &__text{
+
+      &__text {
         text-align: center;
         font-size: 2rem;
         margin: 25px 0 45px 0;
       }
-      &__author{
+
+      &__author {
         display: block;
         margin-bottom: 60px;
       }
     }
   }
-  &__media{
+
+  &__media {
+    @apply rounded;
     object-fit: cover;
     max-width: 100%;
     width: 100%;
     height: 100%;
   }
-  &__content{
+
+  &__content {
+    &:first-child {
+      @apply bg-dark-gray rounded transition-all hover:cursor-pointer
+      hover:bg-primary hover:text-dark-gray;
+      &:hover {
+        .primaryInfo__type {
+          @apply text-secondary transition-all bg-black-origin;
+        }
+
+        .secondaryInfo__mediaComments * {
+          fill: #303030;
+        }
+
+        .secondaryInfo__mediaViews * {
+          fill: #303030;
+        }
+      }
+    }
+
     padding: 30px;
     inset: 0;
     position: absolute;
@@ -42,40 +68,47 @@
     gap: 10px;
     grid-template: 1fr 1fr / 1fr 1fr 1fr;
   }
-  &__text{
+
+  &__text {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
   }
-  &__author{
+
+  &__author {
     display: none;
   }
 }
 
-.primaryInfo{
+.primaryInfo {
   align-items: flex-end;
   display: flex;
   gap: 10px;
   grid-column: 1 / 2;
-  &__date{
+
+  &__date {
     white-space: nowrap;
   }
-  &__type{
+
+  &__type {
     @apply bg-black-transparent rounded p-1 relative top-1 font-bold;
+    padding: 5px 20px;
   }
 }
 
-.secondaryInfo{
+.secondaryInfo {
   align-items: flex-end;
   display: flex;
   gap: 24px;
   grid-column: 3 / -1;
   justify-content: flex-end;
-  &__views{
+
+  &__views {
     align-items: center;
     gap: 10px;
     display: flex;
   }
-  &__comments{
+
+  &__comments {
     align-items: center;
     gap: 10px;
     display: flex;

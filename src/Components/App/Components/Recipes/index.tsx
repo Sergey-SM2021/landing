@@ -4,7 +4,7 @@ import bg from "assets/rec.png";
 import {Recipe} from "./Recipe/Recipe";
 import s from './Recipes.module.scss'
 
-enum type {
+export enum type {
     "breakfast" = "breakfast",
     "lunch" = "lunch",
     "dinner" = "dinner",
@@ -55,7 +55,6 @@ const index: Array<IRecipes> = [
     },
     {
         author: "Sergey Kuznetsov",
-        bg,
         date: "05 Jul 2016",
         type: type.breakfast,
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",

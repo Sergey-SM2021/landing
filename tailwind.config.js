@@ -11,7 +11,8 @@ module.exports = {
             "black": "#1A1A1A",
             "dark-gray": "#252525",
             "light-gray": "#737373",
-            "black-transparent":"rgba(0,0,0,.3)"
+            "black-transparent":"rgba(5,5,5,0.4)",
+            "black-origin":"#000"
         }
     },
     plugins: [],

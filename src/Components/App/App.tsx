@@ -5,6 +5,7 @@ import {About} from "./Components/About/About";
 import {Work} from "./Components/Work/Work";
 import {Dishes} from "./Components/Dishes/Dishes";
 import {Chefs} from "./Components/Chefs/Chefs";
+import {Recipes} from "./Components/Recipes";
 
 export const App = () => {
     return <div className={"flex flex-col min-h-screen bg-black"}>
@@ -14,6 +15,7 @@ export const App = () => {
         <Work/>
         <Dishes/>
         <Chefs/>
+        <Recipes/>
         <Footer/>
     </div>
 }

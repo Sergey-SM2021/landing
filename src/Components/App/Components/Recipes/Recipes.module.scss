@@ -1,0 +1,7 @@
+.recipes {
+  &__container {
+    display: grid;
+    gap: 30px;
+    grid-template: repeat(3, 150px) / 1fr 1fr;
+  }
+}

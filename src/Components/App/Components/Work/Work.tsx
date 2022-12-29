@@ -2,6 +2,7 @@ import {Container} from "Components/Shared/Container/Container"
 import {SectionTitle} from "Components/Shared/SectionTitle/SectionTitle"
 import {MDescription} from "./Description"
 import {memo} from "react"
+import s from "./Work.module.scss"
 
 const descriptions = [
   {
@@ -28,9 +29,9 @@ const descriptions = [
 
 export const Work = memo(() => {
   return (
-    <Container className={"w-full"}>
+    <Container className={s.work}>
       <SectionTitle secondary={"work"} primary={"how it works"} />
-      <div className={"flex justify-between gap-5"}>
+      <div className={s.work__items}>
         {descriptions.map((desc, i) => (
           <MDescription
             whileInView={{y: 0, transition: {delay: (i + 1) * 0.2}, opacity: 1}}

@@ -1,0 +1,22 @@
+.work {
+  @apply w-full;
+  @media (max-width: 1000px) {
+    max-width: 800px
+  }
+  &__items {
+    @apply flex justify-between gap-y-5 gap-5;
+    @media (max-width: 1000px) {
+      flex-wrap: wrap;
+      > * {
+        max-width: 350px;
+      }
+    }
+    @media (max-width: 770px) {
+      flex-wrap: wrap;
+      > * {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+$mobile: 680px;
+
+.intro {
+  padding-bottom: 150px;
+  min-height: 100vh;
+  @apply bg-intro bg-cover bg-no-repeat pt-24;
+  background-position: 50% 50%;
+
+  &__title {
+    @apply text-secondary pb-2 text-7xl pt-24 text-center max-w-3xl;
+    margin: 0 auto;
+    @media (max-width: $mobile) {
+      font-size: 45px;
+      padding-top: 2rem;
+    }
+  }
+
+  &__description {
+    @apply text-secondary leading-7;
+    max-width: 570px;
+    margin: 0 auto;
+    text-align: center;
+    @media (max-width: $mobile) {
+      padding-top: 3rem;
+    }
+  }
+
+  &__items {
+    @apply flex flex-wrap justify-around gap-28 pt-16;
+    @media (max-width: $mobile) {
+      @apply flex-col;
+    }
+  }
+
+  &__makeOrder {
+    @apply pt-16;
+    max-width: min-content;
+    width: 100%;
+    margin: 0 auto;
+
+    > * {
+      white-space: nowrap;
+    }
+
+    @media (max-width: $mobile) {
+      padding-top: 1rem;
+    }
+  }
+}

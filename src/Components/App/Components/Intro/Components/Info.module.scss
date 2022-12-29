@@ -2,6 +2,11 @@
   @apply flex flex-col gap-2 items-center text-secondary;
 
   &__secondary {
+    white-space: nowrap;
     @apply text-light-gray;
+  }
+
+  &__primary {
+    white-space: nowrap;
   }
 }

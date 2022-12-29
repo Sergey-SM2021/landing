@@ -1,3 +1,5 @@
-export const Footer = () => {
-    return <div>Chefdsdsdsdscdscdscdss</div>
-}
+import {memo} from "react"
+
+export const Footer = memo(() => {
+  return <div>Chefdsdsdsdscdscdscdss</div>
+})

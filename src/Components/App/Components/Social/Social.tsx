@@ -1,3 +1,5 @@
-export const Social = () => {
-    return <div>Chefs</div>
-}
+import {memo} from "react"
+
+export const Social = memo(() => {
+  return <div>Chefs</div>
+})
